@@ -1,3 +1,5 @@
+DESCRIBE `mydb`.`adressbook`;
+
 SELECT * FROM `mydb`.`adressbook`;
 
 SELECT 
