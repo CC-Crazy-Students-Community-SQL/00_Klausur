@@ -1,4 +1,10 @@
--- Aufgabe 4
+-- Aufgabe 1
+SHOW TABLES;
+
+-- Aufgabe 2
+CREATE DATABASE IF NOT EXISTS `mydb`;
+
+-- Aufgabe -- Aufgabe 4
 CREATE TABLE IF NOT EXISTS `mydb`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(45) NOT NULL,
