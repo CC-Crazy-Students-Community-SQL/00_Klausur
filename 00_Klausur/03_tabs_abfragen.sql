@@ -7,7 +7,7 @@ SELECT
 FROM 
 	`mydb`.`productlist`
 WHERE
-	category LIKE "Computer"
+	category = "Computer"
 ORDER BY 
 	price DESC
 ;
