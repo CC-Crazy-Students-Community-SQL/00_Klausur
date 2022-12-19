@@ -1,9 +1,11 @@
 -- Aufgabe 6
-TRUNCATE TABLE `mydb`.`adressbook`;
-INSERT INTO `mydb`.`adressbook` 
-	(`ID`, `name`, `vorname`, `plz`, `ort`) 
+TRUNCATE TABLE `mydb`.`productlist`;
+INSERT INTO `mydb`.`productlist` 
+	(`product`, `category`, `price`, `in_stock`) 
 VALUES 
-	(default, "Müller", "Peter", 12991, "Berlin"),
-	(default, "Ay", "Yildiz", 63325, "Langen"),
-	(default, "Sommer", "Petra", 70137, "Stuttgart")
+	("Dell XP1", "Computer", 520.00, 200),
+	("AKOYA ZD217", "Computer", 430.00, 10),
+	("WD 1020", "External Memory", 115.00, 40),
+	("CISCO 2050T", "Network Components", 245.00, 10)
 ;
+

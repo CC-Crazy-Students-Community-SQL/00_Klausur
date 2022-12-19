@@ -1,12 +1,13 @@
-DESCRIBE `mydb`.`adressbook`;
-
-SELECT * FROM `mydb`.`adressbook`;
+DESCRIBE `mydb`.`productlist`;
+SELECT * FROM `mydb`.`productlist`;
 
 SELECT 
-	name,
-    vorname
+	product AS "Ware",
+	price AS "Preis"
 FROM 
-	`mydb`.`adressbook`
+	`mydb`.`productlist`
 WHERE
-	vorname LIKE "Pet%"
+	category LIKE "Computer"
+ORDER BY 
+	price DESC
 ;

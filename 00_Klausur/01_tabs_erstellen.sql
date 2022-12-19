@@ -1,30 +1,30 @@
 -- Aufgabe 4
-CREATE TABLE IF NOT EXISTS `mydb`.`customuers` (
+CREATE TABLE IF NOT EXISTS `mydb`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `sct_name` VARCHAR(45) NOT NULL,
-  `cst_firstname` VARCHAR(45) NOT NULL,
+  `user_name` VARCHAR(45) NOT NULL,
+  `user_mail` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`orders` (
+CREATE TABLE IF NOT EXISTS `mydb`.`posts` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `amount` DECIMAL(6,2) NOT NULL,
-  `customuers_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `customuers_id`),
-  INDEX `fk_orders_customuers_idx` (`customuers_id` ASC),
+  `place` VARCHAR(45) NOT NULL,
+  `likes` INT NOT NULL,
+  PRIMARY KEY (`id`, `likes`),
+  INDEX `fk_orders_customuers_idx` (`likes` ASC),
   CONSTRAINT `fk_orders_customuers`
-    FOREIGN KEY (`customuers_id`)
-    REFERENCES `mydb`.`customuers` (`id`)
+    FOREIGN KEY (`likes`)
+    REFERENCES `mydb`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 -- Aufgabe 6
-CREATE TABLE IF NOT EXISTS `mydb`.`adressbook` (
+CREATE TABLE IF NOT EXISTS `mydb`.`productlist` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `vorname` VARCHAR(45) NOT NULL,
-  `plz` INT NOT NULL,
-  `ort` VARCHAR(45) NOT NULL,
+  `product` VARCHAR(45) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
+  `price` DECIMAL(6,2) NOT NULL,
+  `in_stock` INT NOT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB;
